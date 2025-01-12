@@ -16,7 +16,7 @@ class UniformCheck:
         """Initialize or reinitialize the camera."""
         if self.video is not None and self.video.isOpened():
             self.release_camera()  # Release any existing camera instance
-        self.video = cv2.VideoCapture(1)  # Open the camera
+        self.video = cv2.VideoCapture(0)  # Open the camera
         if not self.video.isOpened():
             raise RuntimeError("Failed to initialize camera.")
         print("Camera initialized successfully.")
